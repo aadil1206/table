@@ -1,0 +1,71 @@
+.custom-table{
+    background-color: aqua;
+    /* border-color: blueviolet;
+    border: 4px solid; */
+    border: 2px;
+}
+.content .table-main {
+    padding: 24px 24px 10px;
+    background: #fff;
+    border-radius: 8px;
+  }
+  
+  .content .table-main thead {
+    border: 1px solid #4d5d6b;
+  }
+  
+  .content .table-main thead th {
+    color: var(--black, #131313);
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .content .table-main tbody tr {
+    border: 1px solid #4d5d6b;
+  }
+  
+  .content .table-main tbody tr:hover {
+    background: #f9f9f9;
+  }
+  
+  .content .table-main tbody tr td {
+    color: var(--text, #4d5d6b);
+    font-family: "Montserrat";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  td{
+    padding: 8px 14px 20px!important;
+  }
+  .featuredtag{
+    background-image: url("https://images.collegedunia.com/public/asset/img/featured-flag.svg");
+    padding: 0rem 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    position: absolute;
+    /* top: -12px; */
+    top: -6px;
+    /* left: 12px; */
+    color: white;
+    width: 120px;
+    height: 21px;
+  }
+  .bg{
+    background-color: #fff3eb;
+    position: relative;
+  }
+  button{
+    padding: 8px!important;
+  }
+  p{
+    margin-bottom: 0rem;
+  }
+  .content .table-main tbody tr td:first-child {
+    text-align: left;
+  }
