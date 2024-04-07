@@ -18,6 +18,10 @@ const Table1 = () => {
   const [page,setpage]=useState(4)
   const [loading,setloading]=useState(false)
   const [sortedArray,setsortedArray]=useState([])
+  const [fees,setfees]=useState(false)
+  const [pack,setpack]=useState(false)
+  const [rev,setrev]=useState(false)
+  
   
   const [Sort,setSort]=useState({
     keyToSort:"CD Rank",
@@ -71,10 +75,20 @@ const target = entries[0]
 
 if(target.isIntersecting){
 
-  if(boole1){
+  if(boole1&&fees){
     
     handleFees()
     console.log("handlefeeschala")
+  }
+  if(boole1&&pack){
+    
+    handlePlac()
+    console.log("handlePlacchala")
+  }
+  if(boole1&&rev){
+    
+    handleRev()
+    console.log("handleRevchala")
   }
        getJsonData();
       
@@ -128,8 +142,10 @@ console.log("page",page)
   ]
  
   const handleFees=(props)=>{
-  
-  console.log("chi",sortedArray)
+    setfees(true)
+    setpack(false)
+    setrev(false)
+  console.log("handlefees",props)
   if(props!=null||boole1){
     let arr=[...sortedArray]
     if(Sort.direction==="asc"){
@@ -167,8 +183,10 @@ console.log("page",page)
     
   }
   const handlePlac=(props)=>{
-  
-    console.log("chi",sortedArray)
+    setfees(false)
+    setpack(true)
+    setrev(false)
+    console.log("handleplac",props)
     if(props!=null||boole1){
       let arr=[...sortedArray]
       if(Sort.direction==="asc"){
@@ -185,7 +203,7 @@ console.log("page",page)
       if(Sort.direction==="desc"){
         arr.sort((a,b)=>{
     
-          return a.lowPack.replace(/,/g, "")-b.lowPack.replace(/,/g, "")
+          return a.lowPack?.replace(/,/g, "")-b.lowPack?.replace(/,/g, "")
          })
          setGetData(arr)
          setSort({
@@ -206,7 +224,9 @@ console.log("page",page)
       
     }
     const handleRev=(props)=>{
-  
+      setfees(false)
+      setpack(false)
+      setrev(true)
       console.log("chi",sortedArray)
       if(props!=null||boole1){
         let arr=[...sortedArray]
