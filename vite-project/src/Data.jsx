@@ -10,6 +10,7 @@ import parul from './assets/parul.png'
 import toi from './assets/toi.png'
 import raj from './assets/raj.jpg'
 import wox from './assets/wox.png'
+import nhce from './assets/nhce.png'
 let Data=[
     {    
         name:"IIT Madras - Indian Institute of Technology - [IITM], Chennai",
@@ -138,16 +139,16 @@ let Data=[
 
     }, 
     {    
-        name:"Parul University, Vadodara",
-        img:parul,
+        name:"New Horizon College of Engineering - [NHCE], Bangalore",
+        img:nhce,
         rank:"#7",
         featured:"yes",
-        courseFees:"1,49,000",
+        courseFees:"10,00,000",
         lowPack:"4,00,000",
         highPack:"₹ 30,00,000",
        rev:"Best in infrastructure",
         reviews:"8.1/10",
-        city:"Vadodara, Gujarat |AICTE, COA, PCI, INC, GNC Approved ",
+        city:"Bangalore, Karnataka |AICTE, UGC, NBA Approved ",
         noReviews:"832",
         // cutoff:"429",
         ranking:["99","147"],
