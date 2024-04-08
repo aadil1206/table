@@ -140,7 +140,7 @@ let Data=[
     {    
         name:"Parul University, Vadodara",
         img:parul,
-        rank:"#2",
+        rank:"#7",
         featured:"yes",
         courseFees:"1,49,000",
         lowPack:"4,00,000",
@@ -161,7 +161,7 @@ let Data=[
     {    
         name:"IIT Kanpur - Indian Institute of Technology - [IITK], Kanpur",
         img:iitkan,
-        rank:"#6",
+        rank:"#8",
         courseFees:"2,29,200",
         featured:"no",
         highPack:"1,90,00,000",
@@ -202,7 +202,7 @@ let Data=[
     {    
         name:"IIT Roorkee - Indian Institute of Technology - [IITR], Roorkee",
         img:iitroor,
-        rank:"#6",
+        rank:"#10",
         courseFees:"2,30,100",
         featured:"no",
         lowPack:"18,34,000",
