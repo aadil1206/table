@@ -11,7 +11,7 @@ import { GoDotFill } from "react-icons/go";
 import { FaCheck } from "react-icons/fa6";
 import { RiArrowDownSLine } from "react-icons/ri";
 const data1 = Data.slice(0, 4);
-const Table1 = () => {
+const DataTable = () => {
   const [getData, setGetData] = useState([]);
   const [boole1, setboole1] = useState(false);
   const [page, setpage] = useState(4);
@@ -410,4 +410,4 @@ const Table1 = () => {
   );
 };
 
-export default Table1;
+export default DataTable;

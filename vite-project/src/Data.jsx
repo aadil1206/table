@@ -3,7 +3,7 @@ import theWeek from "./assets/theWeek.jpg";
 import IITDelhi from "./assets/IITDelhi.png";
 import IITBombay from "./assets/IITBombay.png";
 import IITKharagpur from "./assets/IITKharagpur.png";
-import indiaToday from "./assets/indiato.png";
+import indiaToday from "./assets/indiaToday.png";
 import IITKanpur from "./assets/IITKanpur.png";
 import IITRoorkee from "./assets/IITRoorkee.png";
 import parul from "./assets/parul.png";
