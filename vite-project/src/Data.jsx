@@ -1,5 +1,5 @@
 import IITMadras from "./assets/IITMadras.jpeg";
-import theWeek from "./assets/theWeek.jpg";
+import theWeek from "./assets/theweek.jpg";
 import IITDelhi from "./assets/IITDelhi.png";
 import IITBombay from "./assets/IITBombay.png";
 import IITKharagpur from "./assets/IITKharagpur.png";

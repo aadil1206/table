@@ -32,23 +32,35 @@ const DataTable = () => {
     setsortedArray(data1);
   }, []);
   useEffect(() => {}, [getData]);
-  const getJsonData = useCallback(() => {
-    if (loading) return;
-    setloading(true);
-    const data2 =
-      page === 8 ? Data.slice(page, page + 3) : Data.slice(page, page + 2);
+  const [hasMore, setHasMore] = useState(true);
 
-    setGetData((previous) => [...previous, ...data2]);
+ const getJsonData = useCallback(() => {
+  if (loading || !hasMore) return;
+  setloading(true);
 
-    setTimeout(() => {
-      setloading(false);
-    }, 1000);
-    setsortedArray((get) => [...get, ...data2]);
+  const data2 =
+    page === 8 ? Data.slice(page, page + 3) : Data.slice(page, page + 2);
 
-    if (page === 8 || page < 8) {
-      setpage((prev) => prev + 2);
-    }
-  }, [page, loading]);
+  if (data2.length === 0) {
+    setHasMore(false);
+    setloading(false);
+    return;
+  }
+
+  setGetData((previous) => [...previous, ...data2]);
+  setsortedArray((prev) => [...prev, ...data2]);
+
+  setTimeout(() => {
+    setloading(false);
+  }, 1000);
+
+  if (page < Data.length) {
+    setpage((prev) => prev + 2);
+  } else {
+    setHasMore(false);
+  }
+}, [page, loading, hasMore]);
+
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -402,7 +414,9 @@ const DataTable = () => {
                 );
               })}
 
-            <tr ref={loadref}>{loading && "hello"}</tr>
+<tr ref={loadref}>
+  {loading ? "Loading..." : !hasMore ? "No more data to load" : null}
+</tr>
           </tbody>
         </Table>
       </div>
